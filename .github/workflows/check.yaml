@@ -28,8 +28,6 @@ jobs:
 
   docker:
     runs-on: ubuntu-latest
-    env:
-      DOCKERFILE_PATH: ./cmd/server/Dockerfile
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -48,5 +46,5 @@ jobs:
         with:
           push: true
           tags: taniaduggal60/onepane:latest
-          context: . 
-          file: ${{ env.DOCKERFILE_PATH }}
+          context: ./cmd/server/Dockerfile
+          
