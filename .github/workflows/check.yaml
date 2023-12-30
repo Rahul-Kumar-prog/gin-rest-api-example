@@ -22,7 +22,7 @@ jobs:
           go mod download
 
       - name: Run Build
-        run: go build -o ./cmd/server/myapp ./cmd/server
+        run: go build -o ./cmd/server/article-server ./cmd/server
 
       - name: Run Make Build
         run: make build
