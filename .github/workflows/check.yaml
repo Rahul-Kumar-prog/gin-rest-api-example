@@ -22,7 +22,7 @@ jobs:
           go mod download
 
       - name: Run Build
-        run: go build -o ./cmd/server/article-server ./cmd/server
+        run: go build -o article-server ./cmd/server
 
       - name: Run Make Build
         run: make build
@@ -37,7 +37,7 @@ jobs:
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: taniaduggal60/onepane
-          tags: v1, latest
+          tags: latest
           registry: docker.io
           dockerfile: ./cmd/server/Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
