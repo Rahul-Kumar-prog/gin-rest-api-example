@@ -15,7 +15,7 @@ lint:
 	gofmt -l .
 
 build-docker: # build docker image
-	 docker build -f ./cmd/server/Dockerfile -t docker.io/taniaduggal60/onepane:v1 -t docker.io/taniaduggal60/onepane:latest .
+	 docker build -f ./cmd/server/Dockerfile -t gin-example/article-server .
 
 compose.%:
 	$(eval CMD = ${subst compose.,,$(@)})
